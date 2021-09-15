@@ -4,30 +4,36 @@
 - <a href="#phraseResult">`PhrasedResult`</a>
 - <a href="#getBestFitForAll">GetBestFitForAll()</a>
 
-### <a href="#getBestFitForAll">GetBestFitForAll(strings: `string`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
+```ts
+Put example here....
+```
+
+### <a name="getBestFitForAll">GetBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
 
 Function that takes strings and the phrases to be used in searching and will return the best fit resuts.
 
-### <a name="phrase">`Phrase`</a> interface
+ | Parameter | Description |
+| -------- | ----------- |
+| strings | To be searched through and compared with each phrase in `@phrases` parameter | 
+| phrases | Contains the *pattern* and *phraseName* objects that the `@strings` will be classified to |
 
-The phrase interface is a structure that defines a *PhraseName* and a *Pattern* required for the fuzzy string searching.
+### <a name="phrase">`Phrase`</a>: interface
 
-#### <a name="phraseName">PhraseName</a>
+The phrase interface is a structure that defines a *phraseName* and a *pattern* required for the fuzzy string searching.
 
-Name of the phrase.
+| Property | Description |
+| -------- | ----------- |
+| PhraseName | Name of the phrase | 
+| Pattern | String to be searched and matched with |
 
-#### Pattern
+### <a name="phraseResult">`PhrasedResult`</a>: class
 
-String that to be searched for.
-
-### <a name="phraseResult">PhrasedResult</a>
-
-This class contains important information found from the fuzzy string searching. 
+This class contains the results from a fuzzy string search.
 
 | Property | Description |
 | -------- | ----------- |
 | index | Index of the text in the original collection |
-| bestFitPhrase | Best fit phrase using it's <a href="#phraseName">*PhraseName*</a> |
+| bestFitPhrase | Best fit phrase using it's *PhraseName* |
 | score | Decimal number from 0 to 1 like a percentage showing how sure the algorithm was of the match |
 | text | Reference to the text this `PhrasedResult` correlates to |
 
