@@ -1,20 +1,31 @@
 {
-  "name": "fuzzy-phrase-decipherer",
+  "name": "fuzzy-phrase-classifier",
   "version": "1.0.0",
   "description": "A small utility for fuzzy string searching where you provide strings and phrases, and receive the best fit results.",
-  "main": "./lib/main.js",
-  "types": "./lib/main.d.ts",
-  "scripts": {
-    "start": "tsc --build && node Test.js"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/Chase-William/fuzzy-phrase-classifier",
+  "repository": { 
+    "url": "https://github.com/Chase-William/fuzzy-phrase-classifier.git",
+    "type": "git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "keywords": [ 
+    "Fuzzy String Search",
+    "Approximate String Matching",
+    "String Pattern",
+    "String Phrase",
+    "String Predicting",
+    "String Classifying"
+  ],
+  "author": "Chase William Roth",
+  "license": "MIT",
   "dependencies": {
-    "@types/node": "^16.9.1",
-    "fs": "^0.0.1-security",
-    "fuse.js": "^6.4.6",
-    "path": "^0.12.7",
+    "fuse.js": "^6.4.6"
+  },
+  "devDependencies": {
     "typescript": "^4.4.3"
   }
 }

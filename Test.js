@@ -1,5 +1,5 @@
 const fs = require('fs');
-const phraser = require('./dist/main')
+const phraser = require('./dist')
 
 let phrases = fs.readFileSync('phrases.json');
 let phraseObjects = JSON.parse(phrases);
