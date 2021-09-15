@@ -8,7 +8,7 @@
 Put example here....
 ```
 
-### <a name="getBestFitForAll">GetBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
+#### <a name="getBestFitForAll">GetBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
 
 Function that takes strings and the phrases to be used in searching and will return the best fit resuts.
 
@@ -17,7 +17,7 @@ Function that takes strings and the phrases to be used in searching and will ret
 | strings | To be searched through and compared with each phrase in `@phrases` parameter | 
 | phrases | Contains the *pattern* and *phraseName* objects that the `@strings` will be classified to |
 
-### <a name="phrase">`Phrase`</a>: interface
+#### <a name="phrase">`Phrase`</a>: interface
 
 The phrase interface is a structure that defines a *phraseName* and a *pattern* required for the fuzzy string searching.
 
@@ -26,7 +26,7 @@ The phrase interface is a structure that defines a *phraseName* and a *pattern* 
 | PhraseName | Name of the phrase | 
 | Pattern | String to be searched and matched with |
 
-### <a name="phraseResult">`PhrasedResult`</a>: class
+#### <a name="phraseResult">`PhrasedResult`</a>: class
 
 This class contains the results from a fuzzy string search.
 
