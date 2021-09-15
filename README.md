@@ -1,8 +1,9 @@
-# fuzzy-phrase-decipherer
-
+## fuzzy-phrase-classifier [![npm version](https://badge.fury.io/js/fuzzy-phrase-classifier.svg)](https://badge.fury.io/js/fuzzy-phrase-classifier) [![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
+ ### Types | Functions
+- <a href="#getBestFitForAll">GetBestFitForAll()</a>
 - <a href="#phrase">`Phrase`</a>
 - <a href="#phraseResult">`PhrasedResult`</a>
-- <a href="#getBestFitForAll">GetBestFitForAll()</a>
 
 ```ts
 Put example here....
