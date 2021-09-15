@@ -1,8 +1,9 @@
 {
   "name": "fuzzy-phrase-decipherer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A small utility for fuzzy string searching where you provide strings and phrases, and receive the best fit results.",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
     "start": "tsc --build && node Test.js"
   },

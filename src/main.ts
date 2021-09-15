@@ -1,17 +1,20 @@
 import Fuse from 'fuse.js';
-import { writeFileSync } from 'fs';
+// import { writeFileSync } from 'fs';
 
-export class PhraseResult {
+export class PhrasedResult {
   /**
-   * The index of the text in the original array this PhaseResult correlates to.
+   * Index of the text in the original collection.
    */
   index: number;
 
   /**
-   * The best fit phrase found for the corresponding text.
+   * Best fit phrase name found.
    */
   bestFitPhrase: string;
 
+  /**
+   * Score of the best fit phrase.
+   */
   score: number;
 
   /**
@@ -33,12 +36,27 @@ export class PhraseResult {
   }
 }
 
+/**
+ * Represents a name and pattern as a phrase for fuzzy string searching.
+ */
 export interface Phrase {
+  /**
+   * Name of the phrase.
+   */
   PhraseName: string;
-  Phrase: string;
-} 
+  /**
+   * Pattern of the phrase.
+   */
+  Pattern: string;
+}
 
-export default function GetBestFitForAll(strings: string[], phrases: Phrase[]): void { // :PhraseResult[]
+/**
+ * Finds the best fit phrases for the given strings and maps them together based off their score.
+ * @param strings Strings to be compared & classified based off their score.
+ * @param phrases Phrases to test the given strings with.
+ * @returns Collection of the best fit phrases / strings with some information provided.
+ */
+export default function GetBestFitForAll(strings: string[], phrases: Phrase[]): PhrasedResult[] {
   const options = {
     includeScore: true,
     shouldSort: false, // IMPORTANT
@@ -50,10 +68,10 @@ export default function GetBestFitForAll(strings: string[], phrases: Phrase[]): 
   const perPhraseResults = new Array<Fuse.FuseResult<string>[]>(phrases.length);
   // We will iterate through each phrase to compare it with all strings each time (how fuse is structured)
   for (let phraseIndex = 0; phraseIndex < phrases.length; phraseIndex++) {
-    perPhraseResults[phraseIndex] = fuse.search(phrases[phraseIndex].Phrase);
+    perPhraseResults[phraseIndex] = fuse.search(phrases[phraseIndex].Pattern);
   }
 
-  const stringsResults = new Array<PhraseResult>(strings.length);
+  const stringsResults = new Array<PhrasedResult>(strings.length);
   
   // Contains the index for the current fuseResult that references the original strings array
   let originIndex: number;
@@ -70,7 +88,7 @@ export default function GetBestFitForAll(strings: string[], phrases: Phrase[]): 
       originIndex = fuseResult.refIndex;
       // If nothing has been set, assign this phrase and there is no need for a comparison
       if (stringsResults[originIndex] == null) {
-        stringsResults[originIndex] = new PhraseResult(
+        stringsResults[originIndex] = new PhrasedResult(
           originIndex, 
           strings[originIndex], 
           phrases[phraseIndex].PhraseName, 
@@ -83,7 +101,7 @@ export default function GetBestFitForAll(strings: string[], phrases: Phrase[]): 
     }
   }
 
-  writeFileSync('raw.json', JSON.stringify(perPhraseResults));
-  writeFileSync('normalized.json', JSON.stringify(stringsResults));
-  console.log("finished");
+  // writeFileSync('raw.json', JSON.stringify(perPhraseResults));
+  // writeFileSync('normalized.json', JSON.stringify(stringsResults));
+  return stringsResults;
 }

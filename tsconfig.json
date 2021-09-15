@@ -4,8 +4,6 @@
     "module": "CommonJS",
     "lib": ["dom", "esnext"],
     "declaration": true,
-    "declarationMap": true,
-    "jsx": "react",
     "strict": true,
     "sourceMap": true,
     "baseUrl": "./src",
