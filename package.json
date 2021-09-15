@@ -1,0 +1,19 @@
+{
+  "name": "fuzzy-phrase-decipherer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --build && node Test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.9.1",
+    "fs": "^0.0.1-security",
+    "fuse.js": "^6.4.6",
+    "path": "^0.12.7",
+    "typescript": "^4.4.3"
+  }
+}

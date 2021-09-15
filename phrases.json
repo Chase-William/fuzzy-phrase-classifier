@@ -1,0 +1,62 @@
+[
+  { 
+    "PhraseName": "EnemyDinoKilled",
+    "Phrase": "Your Tribe killed" 
+  },    
+  { 
+    "PhraseName": "EnemyPlayerKilled",
+    "Phrase": "Your Tribe killed" 
+  },
+  { 
+    "PhraseName": "TribeMemberInvited",
+    "Phrase": "was added to the Tribe by" 
+  },
+  { 
+    "PhraseName": "TribeMemberRankChanged",
+    "Phrase": "set to Rank Group" 
+  },
+  { 
+    "PhraseName": "TribeMemberAdminPromoted",
+    "Phrase": "was promoted to a Tribe Admin by" 
+  },
+  { 
+    "PhraseName": "TribeMemberKicked",
+    "Phrase": "was removed from the Tribe!" 
+  },
+  { 
+    "PhraseName": "TribeMemberPodded",
+    "Phrase": "froze" 
+  },
+  { 
+    "PhraseName": "TribeMemberDemolished",
+    "Phrase": "demolished a" 
+  },
+  { 
+    "PhraseName": "TribeMemberTamed",
+    "Phrase": "Tamed an" 
+  },
+  { 
+    "PhraseName": "TribeMemberClaimed",
+    "Phrase": "claimed" 
+  },
+  { 
+    "PhraseName": "TribeMemberUnclaimed",
+    "Phrase": "unclaimed" 
+  },
+  { 
+    "PhraseName": "TekSensorEnemyDino",
+    "Phrase": "trigged by an enemy dino." 
+  },
+  { 
+    "PhraseName": "TekSensorEnemyPlayer",
+    "Phrase": "trigged by an enemy survivor." 
+  },
+  { 
+    "PhraseName": "TekSensorWildDino",
+    "Phrase": "trigged by something." 
+  },
+  { 
+    "PhraseName": "TekSensorFriendlySurvivor",
+    "Phrase": "triggered by a friendly survivor." 
+  }
+]
