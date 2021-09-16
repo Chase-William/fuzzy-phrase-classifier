@@ -6,7 +6,32 @@
 - <a href="#phraseResult">`PhrasedResult`</a>
 
 ```ts
-Put example here....
+import getBestFitForAll, { Phrase } from "fuzzy-phrase-classifier";
+
+const strings = [
+  "The i o of the World",
+  "The good Hunt",
+  "The Dragqueen Reborn",
+  "What Great Hunt?",
+  "The iye of what Word?"
+];
+
+const phrases: Phrase[] = [
+  { 
+    "PhraseName": "The first book in the series",
+    "Pattern": "The Eye of the World" 
+  },    
+  { 
+    "PhraseName": "The second book in the series",
+    "Pattern": "The Great Hunt" 
+  },
+  { 
+    "PhraseName": "The third book in the series",
+    "Pattern": "The Dragon Reborn" 
+  }
+];
+
+console.log(getBestFitForAll(strings, phrases));
 ```
 
 #### <a name="getBestFitForAll">GetBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
