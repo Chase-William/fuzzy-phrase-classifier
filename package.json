@@ -1,6 +1,6 @@
 {
   "name": "fuzzy-phrase-classifier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small utility for fuzzy string searching where you provide strings and phrases, and receive the best fit results.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
