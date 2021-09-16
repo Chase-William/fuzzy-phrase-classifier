@@ -1,18 +1,18 @@
 {
   "name": "fuzzy-phrase-classifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small utility for fuzzy string searching where you provide strings and phrases, and receive the best fit results.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/Chase-William/fuzzy-phrase-classifier",
-  "repository": { 
+  "repository": {
     "url": "https://github.com/Chase-William/fuzzy-phrase-classifier.git",
     "type": "git"
   },
   "scripts": {
     "build": "tsc --build"
   },
-  "keywords": [ 
+  "keywords": [
     "Fuzzy String Search",
     "Approximate String Matching",
     "String Pattern",
