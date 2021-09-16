@@ -34,7 +34,7 @@ const phrases: Phrase[] = [
 console.log(getBestFitForAll(strings, phrases));
 ```
 
-#### <a name="getBestFitForAll">GetBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
+#### <a name="getBestFitForAll">getBestFitForAll(strings: `string[]`, phrases: `Phrase[]`): `PhrasedResult[]`</a>
 
 Function that takes strings and the phrases to be used in searching and will return the best fit resuts.
 
@@ -59,7 +59,7 @@ This class contains the results from a fuzzy string search.
 | Property | Description |
 | -------- | ----------- |
 | index | Index of the text in the original collection |
-| bestFitPhrase | Best fit phrase using it's *PhraseName* |
+| bestFitPhrase | Best fit phrase using it's *phraseName* |
 | score | Decimal number from 0 to 1 like a percentage showing how sure the algorithm was of the match |
 | text | Reference to the text this `PhrasedResult` correlates to |
 
