@@ -17,7 +17,7 @@ Function that takes strings and the phrases to be used in comparison and will re
 | phrases   | Contains the *pattern* and *phraseName* objects that the `@strings` will be classified to |
 
 ```ts
-import getBestFitForAll, { Phrase } from "fuzzy-phrase-classifier";
+import { Phrase, getBestFitForAll } from "fuzzy-phrase-classifier";
 
 const strings = [
   "The i o of the World",
@@ -55,7 +55,7 @@ Function that takes `Phraseable` objects and the phrases to be used in compariso
 | phrases     | Contains the *pattern* and *phraseName* objects that the `@phraseables` will be classified to |
 
 ```ts
-import applyBestFitForAll from "fuzzy-phrase-classifier";
+import { applyBestFitForAll } from "fuzzy-phrase-classifier";
 
 const strings = [
   "The i o of the World",

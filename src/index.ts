@@ -120,7 +120,7 @@ export function applyBestFitForAll(phraseables: Phraseable[], phrases: Phrase[])
  * @param phrases Phrases to test the given strings with.
  * @returns Collection of the best fit phrases / strings with some information provided.
  */
-export default function getBestFitForAll(strings: string[], phrases: Phrase[]): PhrasedResult[] {
+export function getBestFitForAll(strings: string[], phrases: Phrase[]): PhrasedResult[] {
   const options = {
     includeScore: true,
     shouldSort: false, // IMPORTANT
