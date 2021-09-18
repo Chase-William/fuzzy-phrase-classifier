@@ -5,14 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/Chase-William/fuzzy-phrase-classifier",
-  "repository": { 
+  "repository": {
     "url": "https://github.com/Chase-William/fuzzy-phrase-classifier.git",
     "type": "git"
   },
   "scripts": {
     "build": "tsc --build"
   },
-  "keywords": [ 
+  "keywords": [
     "Fuzzy String Search",
     "Approximate String Matching",
     "String Pattern",
@@ -23,6 +23,8 @@
   "author": "Chase William Roth",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^16.9.2",
+    "fs": "^0.0.1-security",
     "fuse.js": "^6.4.6"
   },
   "devDependencies": {
